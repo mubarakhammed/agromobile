@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">AgroMobile</string>
+    <string name="leku_app_name" translatable="false">Leku Demo</string>
+    <string name="google_maps_key">AIzaSyCX8mrjNKiQEKTtIB1839gIS8pp1510jtg</string>
+    <string name="launch_map_picker" translatable="false">LAUNCH MAP LOCATION PICKER ACTIVITY</string>
+    <string name="launch_legacy_map_picker" translatable="false">LAUNCH LEGACY MAP LOCATION ACTIVITY</string>
+    <string name="launch_map_picker_with_pois" translatable="false">LAUNCH MAP WITH POIS</string>
+    <string name="launch_map_picker_with_style" translatable="false">LAUNCH MAP WITH STYLE</string>
+    <string name="leku_lib_version" translatable="false">version 8.0.0</string>
+
+
+    <string name="stored_email">agro.email</string>
+    <string name="stored_password">agro.password</string>
+
+    <string name="about">The information an Extension expert in cashew nuts value chain needs to progress towards better extension services!\n
+        With AgroMobile, Extension experts can find the information they need to improve their knowledge dissemination of agricultural and management practices – in the right format and at the right moment.
+        AgroMobile complements technical assistance, awareness and use of mobile applications in connectivity, information gathering and dissemination
+        Extension experts can:
+
+• Identify challenges through self-assessment
+
+• Collaborate with other colleagues
+
+• Learn how to implement adjustments with audio visual resources
+
+• Track progress towards better production
+
+• Have access to change in procedures and change in the cashew value chain.
+
+</string>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About the App"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/deep_green"
+            android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="The information an Extension expert in cashew nuts value chain needs to progress towards better extension services With AgroMobile, Extension experts can find the information they need to improve their knowledge dissemination of agricultural and management practices – in the right format and at the right moment.
+        AgroMobile complements technical assistance, awareness and use of mobile applications in connectivity, information gathering and dissemination Extension experts can:"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitosansregular"
+        android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+           android:text="• Identify challenges through self-assessment"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:textColor="@color/deep_green"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="• Collaborate with other colleagues"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:textColor="@color/deep_green"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="• Learn how to implement adjustments with audio visual resources"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:textColor="@color/deep_green"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:text="• Track progress towards better production"
+            android:textColor="@color/deep_green" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:text="• Have access to change in procedures and change in the cashew value chain."
+            android:textColor="@color/deep_green" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
