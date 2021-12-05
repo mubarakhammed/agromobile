@@ -10,10 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.mubarak.agromobile.admin.AdminUpdateNote;
 
 import java.net.URI;
 import java.util.List;
@@ -22,6 +25,7 @@ public class NoteAdapter extends  RecyclerView.Adapter<NoteAdapter.ViewHolder> {
 
     private List<NoteList> listitems;
     private Context context;
+    public static String id;
 
     public NoteAdapter(List<NoteList> listitems, int list_item, Context context) {
         this.listitems = listitems;
@@ -41,9 +45,8 @@ public class NoteAdapter extends  RecyclerView.Adapter<NoteAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull NoteAdapter.ViewHolder holder, int position) {
         final NoteList listHomeItem = listitems.get(position);
 
-        holder.title.setText(listHomeItem.getNote());
-        holder.description.setText(listHomeItem.getDescription());
-        holder.youtubelink = listHomeItem.getYoutubelink();
+        holder.title.setText(listHomeItem.getTitle());
+        holder.noteid = listHomeItem.getNoteid();
         holder.pdffile = listHomeItem.getPdflink();
     }
 
@@ -65,37 +68,48 @@ public class NoteAdapter extends  RecyclerView.Adapter<NoteAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView title, description, descriptionHeading;
-        private String youtubelink, pdffile;
+        private String  pdffile, noteid;
         private ImageView youtube, pdf;
+        private LinearLayout linearLayout;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             title = itemView.findViewById(R.id.noteTitle);
-            description = itemView.findViewById(R.id.noteDescription);
-
-            descriptionHeading = itemView.findViewById(R.id.descriptionHeading);
-            descriptionHeading.setPaintFlags(descriptionHeading.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
-
-            youtube = itemView.findViewById(R.id.loadYoutube);
-            pdf = itemView.findViewById(R.id.downloadPDF);
-
-            youtube.setOnClickListener(new View.OnClickListener() {
+            linearLayout = itemView.findViewById(R.id.listlayout);
+            linearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    watchYoutubeVideo(context, youtubelink);
+                    id = noteid;
+                    Intent n_act = new Intent(context, NoteDisplay.class);
+                    n_act.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(n_act);
                 }
             });
+//            description = itemView.findViewById(R.id.noteDescription);
+//
+//            descriptionHeading = itemView.findViewById(R.id.descriptionHeading);
+//            descriptionHeading.setPaintFlags(descriptionHeading.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
 
-            pdf.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
-                    myWebLink.setData(Uri.parse(pdffile));
-                    myWebLink.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.startActivity(myWebLink);
-                    Log.d("See Me", "onClick: " + pdffile);
-                }
-            });
+            //youtube = itemView.findViewById(R.id.loadYoutube);
+           // pdf = itemView.findViewById(R.id.downloadPDF);
+
+//            youtube.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    watchYoutubeVideo(context, youtubelink);
+//                }
+//            });
+
+//            pdf.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
+//                    myWebLink.setData(Uri.parse(pdffile));
+//                    myWebLink.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    context.startActivity(myWebLink);
+//                    Log.d("See Me", "onClick: " + pdffile);
+//                }
+//            });
 
 
         }

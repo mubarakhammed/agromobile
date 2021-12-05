@@ -17,7 +17,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AgroMobile">
-        <activity android:name=".About"></activity>
+        <activity
+            android:name=".NoteDisplay"
+            android:exported="false" />
+        <activity android:name=".About" />
         <activity android:name=".seperate.New" />
         <activity android:name=".admin.Users" />
         <activity android:name=".admin.AdminPanel" />

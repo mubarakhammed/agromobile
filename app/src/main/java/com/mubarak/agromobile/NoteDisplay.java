@@ -24,27 +24,29 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpecificNote extends AppCompatActivity {
+public class NoteDisplay extends AppCompatActivity {
 
     private LottieAnimationView animationView, empty;
-    private static final String TAG = "Notes";
+    private static final String TAG = "NotesDisplay";
     private ImageView back;
 
     RecyclerView recyclerView;
     RecyclerView.Adapter[] adapter = new RecyclerView.Adapter[1];
-    List<NoteList> listitems;
+    List<noteDisplayList> listitems;
+    private String id = NoteAdapter.id;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_specific_note);
+        setContentView(R.layout.activity_note_display);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.deep_green));
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.deep_green));
         }
 
-       // empty = (LottieAnimationView)findViewById(R.id.empty_plan);
+        // empty = (LottieAnimationView)findViewById(R.id.empty_plan);
 
         back = (ImageView) findViewById(R.id.back_from_notes);
         back.setOnClickListener(new View.OnClickListener() {
@@ -53,29 +55,27 @@ public class SpecificNote extends AppCompatActivity {
                 finish();
             }
         });
-        animationView = (LottieAnimationView)findViewById(R.id.animationView2);
-        recyclerView = (RecyclerView)findViewById(R.id.note_recycler);
+        animationView = (LottieAnimationView)findViewById(R.id.animationView3);
+        recyclerView = (RecyclerView)findViewById(R.id.note_display_recycler);
         recyclerView.setHasFixedSize(false);
         listitems = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter[0] = new NoteAdapter(listitems, R.layout.notelist, this);
+        adapter[0] = new noteDisplayAdapter(listitems, R.layout.final_note_list, this);
         recyclerView.setAdapter(adapter[0]);
 
-        getNotes();
-
-
+        getFullNotes();
     }
 
-    private void getNotes() {
+    private void getFullNotes() {
         animationView.setVisibility(View.VISIBLE);
-        AndroidNetworking.post("https://ebco.com.ng/agromobile-working-api/note_display.php")
+        AndroidNetworking.post("https://ebco.com.ng/agromobile-working-api/note_display_group_id.php?id="+id)
 
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsString(new StringRequestListener() {
                     @Override
                     public void onResponse(String response) {
-                         animationView.setVisibility(View.GONE);
+                        animationView.setVisibility(View.GONE);
                         Log.d(TAG, "onResponse: " + response);
                         // do anything with response
                         try {
@@ -88,22 +88,23 @@ public class SpecificNote extends AppCompatActivity {
                             if (array.length()<1){
                                 Log.d(TAG, "onResponse: " + "I am empty");
 
-                               // empty.setVisibility(View.VISIBLE);
+                                // empty.setVisibility(View.VISIBLE);
                                 recyclerView.setVisibility(View.GONE);
                             }
 
                             for (int i = 0; i < array.length(); i++) {
                                 JSONObject o = array.getJSONObject(i);
-                                NoteList item = new NoteList(
+                                noteDisplayList item = new noteDisplayList(
                                         o.getString("note_id"),
                                         o.getString("title"),
+                                        o.getString("description"),
                                         o.getString("pdf_link")
 
                                 );
                                 listitems.add(item);
                             }
 
-                            adapter[0] = new NoteAdapter(listitems, R.layout.notelist, getApplicationContext());
+                            adapter[0] = new noteDisplayAdapter(listitems, R.layout.final_note_list, getApplicationContext());
                             recyclerView.setAdapter(adapter[0]);
 
 
@@ -114,7 +115,7 @@ public class SpecificNote extends AppCompatActivity {
                     @Override
                     public void onError(ANError error) {
                         animationView.setVisibility(View.GONE);
-                       // empty.setVisibility(View.VISIBLE);
+                        // empty.setVisibility(View.VISIBLE);
                         recyclerView.setVisibility(View.GONE);
 
                         Log.d(TAG, "onError:  " + error);

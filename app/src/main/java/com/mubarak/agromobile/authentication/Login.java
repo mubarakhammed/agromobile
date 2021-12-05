@@ -48,14 +48,14 @@ public class Login extends AppCompatActivity {
         username = (EditText) findViewById(R.id.username_input);
         password = (EditText) findViewById(R.id.password_input);
 
-        registerlink = (TextView) findViewById(R.id.registerLink);
-        registerlink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent go = new Intent(Login.this, Registeration.class);
-                startActivity(go);
-            }
-        });
+//        registerlink = (TextView) findViewById(R.id.registerLink);
+//        registerlink.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent go = new Intent(Login.this, Registeration.class);
+//                startActivity(go);
+//            }
+//        });
         mPreferences = PreferenceManager.getDefaultSharedPreferences(Login.this);
         mEditor = mPreferences.edit();
 

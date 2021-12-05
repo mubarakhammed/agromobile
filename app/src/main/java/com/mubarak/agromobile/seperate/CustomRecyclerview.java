@@ -83,13 +83,13 @@ public class CustomRecyclerview extends RecyclerView.Adapter<CustomRecyclerview.
             super(itemView);
 
             title = itemView.findViewById(R.id.noteTitle);
-            description = itemView.findViewById(R.id.noteDescription);
-
-            descriptionHeading = itemView.findViewById(R.id.descriptionHeading);
-            descriptionHeading.setPaintFlags(descriptionHeading.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
-
-            youtube = itemView.findViewById(R.id.loadYoutube);
-            pdf = itemView.findViewById(R.id.downloadPDF);
+//            description = itemView.findViewById(R.id.noteDescription);
+//
+//            descriptionHeading = itemView.findViewById(R.id.descriptionHeading);
+//            descriptionHeading.setPaintFlags(descriptionHeading.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
+//
+//            youtube = itemView.findViewById(R.id.loadYoutube);
+           // pdf = itemView.findViewById(R.id.downloadPDF);
 
 
 

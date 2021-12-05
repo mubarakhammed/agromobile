@@ -2,30 +2,25 @@ package com.mubarak.agromobile;
 
 public class NoteList {
 
-    private String note;
-    private String description;
-    private String youtubelink;
+    private String noteid;
+    private String title;
     private String pdflink;
 
-    public NoteList(String note,String description, String youtubelink, String pdflink){
-        this.note = note;
-        this.description = description;
-        this.youtubelink = youtubelink;
+    public NoteList(String noteid,String title, String pdflink){
+        this.noteid = noteid;
+        this.title = title;
         this.pdflink = pdflink;
 
     }
 
-    public String getNote(){
-        return  note;
+    public String getNoteid(){
+        return  noteid;
     }
 
-    public String getDescription(){
-        return description;
+    public String getTitle(){
+        return title;
     }
 
-    public String getYoutubelink(){
-        return youtubelink;
-    }
 
     public String getPdflink(){
         return pdflink;
