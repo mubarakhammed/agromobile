@@ -98,7 +98,8 @@ public class NoteDisplay extends AppCompatActivity {
                                         o.getString("note_id"),
                                         o.getString("title"),
                                         o.getString("description"),
-                                        o.getString("pdf_link")
+                                        o.getString("pdf_link"),
+                                        o.getString("youtube_link")
 
                                 );
                                 listitems.add(item);

@@ -6,16 +6,26 @@
         <entry key="app/src/main/res/layout/activity_about.xml" value="0.259375" />
         <entry key="app/src/main/res/layout/activity_admin.xml" value="0.259375" />
         <entry key="app/src/main/res/layout/activity_admin_panel.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/activity_admin_update_note.xml" value="0.259375" />
         <entry key="app/src/main/res/layout/activity_fetch_note.xml" value="0.259375" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.1765625" />
+        <entry key="app/src/main/res/layout/activity_new.xml" value="0.1765625" />
         <entry key="app/src/main/res/layout/activity_note_display.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/activity_question.xml" value="0.1765625" />
+        <entry key="app/src/main/res/layout/activity_registeration.xml" value="0.1765625" />
         <entry key="app/src/main/res/layout/activity_specific_note.xml" value="0.1859375" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_users.xml" value="0.259375" />
         <entry key="app/src/main/res/layout/admin_note_list.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/bottomloginerror.xml" value="0.259375" />
         <entry key="app/src/main/res/layout/final_note_list.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/new_list.xml" value="0.259375" />
         <entry key="app/src/main/res/layout/notelist.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/progress_button_for_login.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/userlist.xml" value="0.259375" />
       </map>
     </option>
   </component>

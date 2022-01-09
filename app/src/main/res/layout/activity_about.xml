@@ -6,58 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".About">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-344dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About the App"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/montserrat_bold"
+            android:text="About the App"
             android:textColor="@color/deep_green"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="The information an Extension expert in cashew nuts value chain needs to progress towards better extension services With AgroMobile, Extension experts can find the information they need to improve their knowledge dissemination of agricultural and management practices – in the right format and at the right moment.
-        AgroMobile complements technical assistance, awareness and use of mobile applications in connectivity, information gathering and dissemination Extension experts can:"
-        android:layout_marginRight="20dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/nunitosansregular"
-        android:layout_marginLeft="20dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-           android:text="• Identify challenges through self-assessment"
             android:layout_marginRight="20dp"
             android:fontFamily="@font/nunitosansregular"
-            android:textColor="@color/deep_green"
-            android:layout_marginLeft="20dp"/>
+            android:text="The information an Extension expert in cashew nuts value chain needs to progress towards better extension services!
+
+With AgroMobile, Extension experts can find the information they need to improve their knowledge dissemination of agricultural and management practices – in the right format and at the right moment.
+
+AgroMobile complements technical assistance, awareness and use of mobile applications in connectivity, information gathering and dissemination
+"
+            android:textColor="@color/black" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:text="• Identify challenges through self-assessment"
+            android:textColor="@color/deep_green" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunitosansregular"
             android:text="• Collaborate with other colleagues"
-            android:layout_marginRight="20dp"
-            android:fontFamily="@font/nunitosansregular"
-            android:textColor="@color/deep_green"
-            android:layout_marginLeft="20dp"/>
+            android:textColor="@color/deep_green" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="• Learn how to implement adjustments with audio visual resources"
             android:layout_marginRight="20dp"
             android:fontFamily="@font/nunitosansregular"
-            android:textColor="@color/deep_green"
-            android:layout_marginLeft="20dp"/>
+            android:text="• Learn how to implement adjustments with audio visual resources"
+            android:textColor="@color/deep_green" />
 
         <TextView
             android:layout_width="match_parent"
@@ -82,18 +94,74 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunitosansbold"
-            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Agro mobile Application is a mobile application developed in the field of agriculture. It contains information on the Cashew value Chain.
+
+The application is made available in English Language. It works in its full features in online mode. The application takes care of the needs of extension officers, small, marginal and big cashew farmers.
+
+There are four different categories of information covered under the tool. The broad areas of information are
+"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="1. Pre Planting Operations: Cashew seed Planting, Climate Requirements, Land Preparation, Cashew Seed Treatment, Cashew Seed Nut selection, Nutrient Requirement.   "
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="2.Planting Operations: Planting, Cashew Varieties, Fertilizer Requirements. "
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="3. Post Planting Operations: Weeding, Prunning, Thinning, Pest and Diseases and Grafting."
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="4.Trade, Uses and Processing: Cashew Kernels, Cashew Nut Shell, Cashew Apple, Cashew Wood, Cashew Trading, Cashew Processing, Cashew Quality."
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:text="Developed by Olatunji Boye and Professor S.A Onasanya, department of Educational Technology, University of Ilorin."
+            android:fontFamily="@font/nunitosansbold"
             android:gravity="center"
+            android:text="Developed by Olatunji Boye and Professor S.A Onasanya, department of Educational Technology, University of Ilorin."
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     </LinearLayout>
+
+    </ScrollView>
 
 
 

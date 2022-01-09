@@ -6,6 +6,7 @@ public class noteDisplayList {
     private String title;
     private String description;
     private String pdfLink;
+    private String youtubeLink;
 
     public String getNoteid() {
         return noteid;
@@ -23,10 +24,15 @@ public class noteDisplayList {
         return pdfLink;
     }
 
-    public noteDisplayList(String noteid, String title, String description, String pdfLink) {
+    public String getYoutubeLink(){
+        return youtubeLink;
+    }
+
+    public noteDisplayList(String noteid, String title, String description, String pdfLink, String youtubeLink) {
         this.noteid = noteid;
         this.title = title;
         this.description = description;
         this.pdfLink = pdfLink;
+        this.youtubeLink = youtubeLink;
     }
 }

@@ -1,6 +1,7 @@
 package com.mubarak.agromobile;
 
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -62,14 +63,15 @@ public class noteDisplayAdapter extends RecyclerView.Adapter<noteDisplayAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView title, description;
-        private String pdflink;
-        private ImageView pdf;
+        private String pdflink, youtubeLink;
+        private ImageView pdf, youtube;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             title = itemView.findViewById(R.id.finalnoteTitle);
             description = itemView.findViewById(R.id.notedesc);
             pdf = itemView.findViewById(R.id.finaldownloadPDF);
+            youtube = itemView.findViewById(R.id.loadYoutube);
             pdf.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -81,6 +83,32 @@ public class noteDisplayAdapter extends RecyclerView.Adapter<noteDisplayAdapter.
                 }
             });
 
+            youtube.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    watchYoutubeVideo(context, youtubeLink);
+                }
+            });
+
+        }
+    }
+
+    public static void watchYoutubeVideo(Context context, String link){
+
+        Uri webpage = Uri.parse(link);
+
+        if (!link.startsWith("http://") && !link.startsWith("https://")) {
+            webpage = Uri.parse("http://" + link);
+        }
+        Intent appIntent = new Intent(Intent.ACTION_VIEW, webpage);
+        Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                webpage);
+        try {
+            appIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(appIntent);
+        } catch (ActivityNotFoundException ex) {
+            webIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(webIntent);
         }
     }
 }

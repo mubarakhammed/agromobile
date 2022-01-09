@@ -6,6 +6,7 @@ public class NoteList {
     private String title;
     private String pdflink;
 
+
     public NoteList(String noteid,String title, String pdflink){
         this.noteid = noteid;
         this.title = title;

@@ -48,6 +48,7 @@ public class NoteAdapter extends  RecyclerView.Adapter<NoteAdapter.ViewHolder> {
         holder.title.setText(listHomeItem.getTitle());
         holder.noteid = listHomeItem.getNoteid();
         holder.pdffile = listHomeItem.getPdflink();
+
     }
 
     @Override
@@ -68,7 +69,7 @@ public class NoteAdapter extends  RecyclerView.Adapter<NoteAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView title, description, descriptionHeading;
-        private String  pdffile, noteid;
+        private String  pdffile, noteid, youtubelink;
         private ImageView youtube, pdf;
         private LinearLayout linearLayout;
         public ViewHolder(@NonNull View itemView) {
@@ -90,7 +91,7 @@ public class NoteAdapter extends  RecyclerView.Adapter<NoteAdapter.ViewHolder> {
 //            descriptionHeading = itemView.findViewById(R.id.descriptionHeading);
 //            descriptionHeading.setPaintFlags(descriptionHeading.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
 
-            //youtube = itemView.findViewById(R.id.loadYoutube);
+           // youtube = itemView.findViewById(R.id.loadYoutube);
            // pdf = itemView.findViewById(R.id.downloadPDF);
 
 //            youtube.setOnClickListener(new View.OnClickListener() {
